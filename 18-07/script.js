@@ -15,5 +15,5 @@ if(a <= 1){
 else if(b >= 3){
     alert(b)
 }else{
-    alert('Неверно');
+    alert(a - b);
 }
