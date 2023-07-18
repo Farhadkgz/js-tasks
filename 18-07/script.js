@@ -6,14 +6,14 @@ if(x === 7){
     alert('Неверно');
 }
 
-// let a = 1;
-// let b = 3;
+let a = 1;
+let b = 3;
 
-// if(a <= 1){
-//     alert(a)
-// }
-// if else(b >= 3){
-//     alert(b)
-// }else{
-//     alert('Неверно')
-// }
+if(a <= 1){
+    alert(a)
+}
+else if(b >= 3){
+    alert(b)
+}else{
+    alert('Неверно');
+}
