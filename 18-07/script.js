@@ -9,11 +9,9 @@ if(x === 7){
 let a = 1;
 let b = 3;
 
-if(a <= 1){
-    alert(a)
+if(a <= 1 && b >= 3){
+    alert(a + b)
 }
-else if(b >= 3){
-    alert(b)
 }else{
     alert(a - b);
 }
