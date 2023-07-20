@@ -1,30 +1,18 @@
-// ---------------------SIGNIN----------------
-let who = prompt('Кто пришел?');
-let anOther = 'Я вас незнаю';
-let exit = 'Вход отменен';
+const who = prompt('Кто пришел?');
 
-
-if(who === 'Admin'){
-    alert(password)
-}
-    else if(who !== 'Admin' && who !== null){
-    alert(anOther)
-}else{
-        alert(exit);
- }
-
-// ---------------------PASSWORD----------------
-let password = prompt('Введите пароль:');
-let welcome = 'Добро пожаловать!';
-let passwordError = 'Пароль неверен';
-
-if(password === '123456'){
-    alert(welcome)
-}
-else if(password !== '123456' && password !== null){
-    alert(passwordError)
-}else{
-    alert(exit);
+if(who === 'Админ'){
+    const password = prompt('Пароль?');
+    if(password === 'Черный Властелин'){
+        alert('Добро пожаловать');
+    } else if(password === null){
+        alert('Вход отменен');
+    } else {
+        alert('Пароль неверен');
+    }
+} else if(who === null){
+    alert('Вход отменен');
+} else {
+    alert('Я вас незнаю');
 }
 
 
