@@ -67,7 +67,7 @@ i++; 5
 let cars = ['BMW', 'SUBARU', 'TOYOTA', 'TESLA'];
 
 for(let i = 0; i < cars.length; i++){
-    console.log(i);
+    console.log(cars[i]);
 }
 
 
