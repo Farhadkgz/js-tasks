@@ -1,73 +1,46 @@
-// const countries = ['Kyrgyzstan', 5, true, {}, null];
-// console.log(countries[4]);
+// 1)  Создайте массив arr = ['a', 'b', 'c', 'd'] и с его помощью выведите 
+//    на экран строку 'a+b, c+d'.
 
-// const numbers = [
-//     [1, 2, 3],
-//     [4, 5, 6],
-//     [7, 8, 9]
-// ]
+let arr = ['a', 'b', 'c', 'd'];
+console.log(arr[0] + arr[1], arr[2] + arr[3]);
 
-// console.log(numbers.length);
+// -----------------------------------------------------------------
 
-// numbers[0] = 'helo';
+// 2) У нас есть массив с элементами 1, 2, 5, 6, 88, 5.
+//    С помощью цикла надо найти сумму элементов этого массива.
 
-// console.log(numbers);
-// console.log(numbers.length);
+let arr0 = [1, 2, 5, 6, 88, 5];
+let result0 = 0;
+for(let i = 0; i < arr0.length; i++){
+result0 += arr0[i];
+}
+console.log(result0);
 
-// const cars = ['BMW', 'SUBARU', 'TOYOTA', 'TESLA'];
+// -----------------------------------------------------------------
 
-// const deletedElem = cars.pop();
+// Создайте массив с различными числами. Должно быть как минимум 10 элементов 
+// внутри массива. С помощью цикла найдите сумму квадратов элементов этого массива. 
+// Квадрат числа 5 будет 25.
 
-// cars.push('MERS', 'HONDA');
+let array = [5, 6, 7, 8, 9, 3, 2];
+let result1 = [];
+for(let i = 0; i < array.length; i++) {
+     summ = array[i] * array[i];
+     result1.push(summ);
+}
+console.log(result1);
 
-// const elem = cars.shift();
-// cars.unshift('KIA');
+// -----------------------------------------------------------------
 
-// console.log(cars);
+// Имеется массив с элементами 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20;
+//    Нужно найти перебирая эти элементы с помощью цикла четные числа.
 
-             // --------------ЦИКЛЫ----------
 
-// for(let i = 0; i < 5; i++){
-//     console.log(i);
-// }
-
-/*
-1)
-let i = 0;
-0 < 5;
-console.log(i);
-
-2)
-i++; 1
-1 < 5; true
-console.log(i); 0
-
-3)
-i++; 2
-2 < 5; true
-console.log(i); 2
-
-4)
-i++; 3
-3 < 5; true
-console.log(i); 3
-
-5)
-i++; 4
-4 < 5; true
-console.log(i); 4
-
-3)
-i++; 5
-5 < 5; false
-Цикл завершвется!
-
-*/
-
-let cars = ['BMW', 'SUBARU', 'TOYOTA', 'TESLA'];
-
-for(let i = 0; i < cars.length; i++){
-    console.log(cars[i]);
+let array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+for(let i = 0; i < array0.length; i++ ){
+    if(array0[i] % 2 == 0){
+    console.log(array0[i])
+    }
 }
 
 
