@@ -5,7 +5,6 @@
 function sum(a, b) {
     console.log(a ** b);
 }
-
 sum(5, 3);
 
 // Варинат 2
@@ -13,7 +12,6 @@ function sum2(someNumber){
     let cube = someNumber * someNumber * someNumber;
     console.log(cube);
 }
-
 sum2(5);
 
 // --------------------------------------------------------------------------------
