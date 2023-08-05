@@ -5,17 +5,24 @@
 // // ввод: 59, 74, 48, 70, 99 ⇒ вывод: кол-во чисел - 4
 
 //  Вариант1
-let count = 0;
-let number = 0;
+function numberCount() {
+    let count = 0;
+    let number = parseInt(prompt("Введите число:"));
 
-while (number !== 99) {
-    number = parseInt(prompt("Введите число:"));
-    if (number !== 99) {
-        count++;
+    function numberCheck() {
+        if (number !== 99) {
+            count++;
+            number = parseInt(prompt("Введите число:"));
+            numberCheck();
+        }
     }
+
+    numberCheck();
+
+    console.log("Количество чисел: " + count);
 }
 
-console.log("Количество чисел: " + count);
+numberCount();
 
 // // -------------------------------------------------------------------
 
@@ -51,19 +58,24 @@ console.log("Количество чисел: " + count);
 // //    чисел (не считая значения 999), и вывести эту информацию на экран.
 // //    ввод: 89, 174, 27, 999 ⇒ вывод: кол-во чисел - 3; сумма = 290
 
-let count = 0;
-let number = 0;
-let sum = 0;
+function countSum(count = 0, sum = 0) {
+    let number = parseInt(prompt("Введите число:"));
 
-while (number !== 999) {
-    number = parseInt(prompt("Введите число:"));
-    if (number !== 999) {
-        count++;
-        sum += number;
+    function numberCheck() {
+        if (number !== 999) {
+            count++;
+            sum += number;
+            number = parseInt(prompt("Введите число:"));
+            numberCheck();
+        }
     }
+
+    numberCheck();
+
+    console.log("Количество чисел: " + count + "; Сумма чисел: " + sum);
 }
 
-console.log("Количество чисел: " + count + "; Сумма чисел: " + sum);
+countSum();
 
 // // -------------------------------------------------------------------
 // // 3) Напишите функцию, которая возвращает объект,
