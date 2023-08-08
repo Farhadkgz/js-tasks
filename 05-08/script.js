@@ -7,9 +7,11 @@
 let array = [1, 2, 3, 4, 5];
 
 let reverse = () => {
-    let num = array.reverse();
-
-    return num;
+    let reversedArray = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+        reversedArray.push(array[i]);
+    }
+    return reversedArray;
 };
 
 alert(reverse());
@@ -35,9 +37,7 @@ let month = () => {
     if (repeat) {
         month();
     } else {
-        alert(
-            "Вы отменили. Для того, что бы возобновить , обновите страницу."
-        );
+        alert("Вы отменили. Для того, что бы возобновить , обновите страницу.");
     }
 };
 
