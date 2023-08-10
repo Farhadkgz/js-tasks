@@ -34,3 +34,4 @@ let myFunc = (object) => {
 
 const user = { name: "Bon", age: 14 };
 myFunc(user);
+
