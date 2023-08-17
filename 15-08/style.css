@@ -1,0 +1,71 @@
+.btn{
+    border: 0;
+    background-color: blueviolet;
+    padding: 15px 50px;
+    color: #fff;
+}
+
+.btn:hover{
+    border: 0;
+    background-color: blueviolet;
+    padding: 15px 50px;
+    color: black;
+}
+
+.parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.one{
+    height: 200px;
+    width: 300px;
+    background-color: blueviolet;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.two{
+    height: 200px;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* --------------------------------- */
+
+.list ul{
+    border-radius: 10px;
+    box-shadow: 0 0 10px hwb(0 0% 100% / 0.5);
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list ul{
+    list-style: none;
+    background-color: greenyellow;
+    color: #000;   
+}
+
+.list a{
+    text-decoration: none;
+    color: green;
+}
+
+.list a:hover {
+    color: black;
+}
+
+
