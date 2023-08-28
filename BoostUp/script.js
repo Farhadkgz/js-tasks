@@ -1,44 +1,39 @@
-/*
+const forms = document.querySelector('#form-reg');
 
-const btn = document.querySelector('#save-btn');
-const form = document.querySelector('form');
-const result = {};
-
-btn.addEventListener("click", () => {
-const elements = form.elements;
-
-Array.from(elements).forEach((e) => {
-const name = e.name;
-const value = e.value;
-
-result[name] = value;
-});
-
-console.log(result);
-}); 
-
-*/
-
-
-const form = document.querySelector('#form-reg');
-
-const reload = (event) => {
+const getFormValue1 = (event) => {
     event.preventDefault();
 
-    const elements = form.elements;
-    const result = {};
+    const formData = new FormData(form);
 
-    for(let i = 0; i < elements.length; i++){
-        const valueElement = elements[i];
-        const name = elements[i].name;
+    const values = Object.fromEntries(formData.entries());
 
-        if(name){
-            result[name] = valueElement.value;
+    console.log(values);
+};
+
+forms.addEventListener('submit', getFormValue1);
+
+// ------------------------------------------------------------------------
+
+const form = document.querySelector('form');
+const inputs = form.querySelectorAll('input');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    validateForm();
+});
+
+function validateForm() {
+    inputs.forEach(function (input) {
+        if (input.value == "") {
+            input.style.borderColor = 'red';
+            const errorMessage = document.createElement('span');
+            errorMessage.innerText = 'Поле не должно быть пустым';
+            errorMessage.style.color = 'red';
+            input.parentNode.appendChild(errorMessage);
+        } else {
+            input.style.borderColor = 'green';
+            
         }
-    }
-    console.log(result);
+    });
 }
-
-form.addEventListener('submit', reload);
-
-
