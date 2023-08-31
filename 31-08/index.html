@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2 class="title">Регистрация</h2>
+        <form id="registration-form">
+            <div class="form-group">
+                <input type="text" placeholder="Имя" name="name" data-required>
+                <span class="error">Заполните пустое поле</span>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Фамилия" name="surname" data-required>
+                <span class="error">Заполните пустое поле</span>
+            </div>
+            <div class="form-group">
+                <textarea name="msg"></textarea>
+            </div>
+            <div class="form-group">
+                <select name="lang" data-required>
+                    <option value="">Выбирите опцию</option>
+                    <option value="javascript">javascript</option>
+                    <option value="java">java</option>
+                    <option value="python">python</option>
+                    
+                </select>
+                <span class="error">Заполните пустое поле</span>
+            </div>
+
+            
+            <div class="form-button">
+                <button type="submit" id="save-btn" class="btn">Сохранить</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
