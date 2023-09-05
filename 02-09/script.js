@@ -8,16 +8,11 @@ async function fetchData(url) {
        if (response.ok) {
            const data = await response.json();
 
-           const array = [];
            data.forEach(e => {
-               array.push(e.title);
-           });
-
-           array.forEach(text => {
-               const pr = document.createElement('p');
-               pr.textContent = text;
-               textContainer.appendChild(pr);
-           });
+            const pr = document.createElement('p');
+            pr.textContent = e.title;
+            textContainer.appendChild(pr);
+        });
            console.log(data);
        } else {
            throw new Error(`HTTP error! Status: ${response.status}`);
