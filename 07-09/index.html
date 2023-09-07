@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2 class="title">Регистрация</h2>
+        <form id="registration-form">
+            <div class="form-group">
+                <input type="text" placeholder="Имя" name="first_name" data-required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Фамилия" name="last_name" data-required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Отчество" name="patronymic" data-required>
+            </div>
+
+            <div class="form-group">
+                <input type="date" placeholder="Дата рождения" name="date_of_birth" data-required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Место учебы" name="study_place" data-required>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" placeholder="Оброзовательные курсы" name="study_course" data-required>
+            </div>
+
+            <div class="form-group">
+                <input type="number" placeholder="Номер телефона" name="phone_number" data-required>
+            </div>
+
+
+            <div class="form-group">
+                <select name="direction_id">
+                    <option value="">Выбирите опцию</option>
+                    <option value="1">Java</option>
+                    <option value="2">Python</option>
+                    <option value="3">Flutter</option>
+                    <option value="4">FrontEnd</option>
+                    
+                </select>
+            </div>
+
+            
+            <div class="form-button">
+                <button type="submit" id="save-btn" class="btn">Сохранить</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
