@@ -27,7 +27,7 @@
                 <div class="stepper-part2">
                     <span>1</span><span>Тестирование</span>
                 </div>
-                
+
                 <div class="stepper-top-line"></div>
                 <div class="stepper-part3">
                     <span>1</span><span>Готово</span>
@@ -53,136 +53,69 @@
                     <div class="form-group-parent">
                         <div class="form-group">
                             <label>Имя</label>
-                            <input type="text" name="name" />
+                            <input type="text" name="first_name" />
                         </div>
 
                         <div class="form-group">
                             <label>Фамилия</label>
-                            <input type="text" name="surname1" />
+                            <input type="text" name="last_name" />
                         </div>
                         <div class="form-group">
                             <label>Отчество</label>
-                            <input type="text" name="surname2" />
+                            <input type="text" name="patronymic" />
                         </div>
 
                         <div class="form-date-parent">
                             <div class="form-date-title">
                                 <h1>Укажи дату своего рождения</h1>
                             </div>
-                            <div class="form-date">
-                                <div class="form-day">
-                                    <label>День</label>
-                                    <div class="wrapper">
-                                        <select name="day" id="day-selector">
-                                            <option value="" selected disabled hidden></option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                            <option value="24">24</option>
-                                            <option value="25">25</option>
-                                            <option value="26">26</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="29">29</option>
-                                            <option value="30">30</option>
-                                            <option value="31">31</option>
-                                        </select>
-                                    </div>
-                                </div>
 
-                                <div class="form-month">
-                                    <label>Месяц</label>
-                                    <div class="wrapper">
-                                        <select name="month" id="month-selector">
-                                            <option value="" selected disabled hidden></option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-year">
-                                    <label>Год</label>
-                                    <div class="wrapper">
-                                        <select name="year" id="year-selector">
-                                            <option value="" selected disabled hidden></option>
-                                            <option value="1930">1930</option>
-                                            <option value="1940">1940</option>
-                                            <option value="1950">1950</option>
-                                            <option value="1960">1960</option>
-                                            <option value="1970">1970</option>
-                                            <option value="1980">1980</option>
-                                            <option value="1990">1990</option>
-                                            <option value="2000">2000</option>
-                                            <option value="2010">2010</option>
-                                            <option value="2023">2023</option>
-                                        </select>
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <input type="date" name="date_of_birth" />
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label>Место учебы (текущее или последнее
-                                образовательное учреждение)</label>
-                            <input type="text" name="place" />
+                            <label
+                                >Место учебы (текущее или последнее
+                                образовательное учреждение)</label
+                            >
+                            <input type="text" name="study_place" />
                         </div>
 
                         <div class="form-group">
-                            <label>Образовательные курсы (какие курсы прошли по
-                                IT)</label>
-                            <input type="text" name="course" />
+                            <label
+                                >Образовательные курсы (какие курсы прошли по
+                                IT)</label
+                            >
+                            <input type="text" name="study_course" />
                         </div>
 
                         <div class="footer-form">
                             <div class="number-phone">
-                                <label>Номер телефона номер должен быть
+                                <label
+                                    >Номер телефона номер должен быть
                                     зарегистрирован в Telegram или
-                                    WhatsApp)</label>
-                                <input type="number" name="number-phone" placeholder="+996 " />
+                                    WhatsApp)</label
+                                >
+                                <input
+                                    type="number"
+                                    name="phone_number"
+                                    placeholder="+996 "
+                                />
                             </div>
                             <div class="direction">
                                 <label>Направление</label>
                                 <div class="wrapper">
-                                    <select name="direction">
+                                    <select name="direction_id">
                                         <option value="" selected disabled hidden></option>
-                                        <option value="JavaScript">JavaScript</option>
-                                        <option value="Java">Java</option>
-                                        <option value="Python">Python</option>
-                                        <option value="Php">Php</option>
-                                        <option value="C#">C#</option>
-                                        <option value="C++">C++</option>
-                                        <option value="Kotlin">Kotlin</option>
+                                        <option value="1">JavaScript</option>
+                                        <option value="2">Java</option>
+                                        <option value="3">Python</option>
+                                        <option value="4">Php</option>
+                                        <option value="5">C#</option>
+                                        <option value="6">C++</option>
+                                        <option value="7">Kotlin</option>
                                     </select>
                                 </div>
                             </div>
