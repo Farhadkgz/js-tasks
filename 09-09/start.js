@@ -9,10 +9,6 @@ submit.addEventListener('click', (e) => {
 
 const base_url = 'http://51.250.97.89:8008';
 
-const objLocal = {
-    data: student_exam_id
-  };
-
   async function localPost(){
     const url = base_url + '/api/v1/exam/start?student_exam_id=' + student_exam_id;
 
