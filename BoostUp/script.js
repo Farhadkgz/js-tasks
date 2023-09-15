@@ -1,6 +1,7 @@
 const forms = document.querySelector('#form-reg');
 
 
+getApi();
 
 forms.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -28,6 +29,10 @@ async function sendingData(){
 
     const response = await fetch(url, options)
     console.log(response);
+
+    if(response.ok){
+        window.location.href = 'start.html';
+    }
 }
 
 
@@ -45,3 +50,29 @@ function validate() {
 
     return count === 0;
 }
+
+async function getApi(){
+    const url = 'http://51.250.97.89:8008/api/v1/direction/list';
+
+    const response = await fetch(url);
+    if(response.ok){
+        const data = await response.json();
+
+        console.log(data);
+
+        renderGetApi(data);
+    }
+}
+
+function renderGetApi(data){
+    const directions = document.getElementById('direction_id')
+
+    data.forEach((elem) => {
+        const addElemOPtions = document.createElement('option');
+
+        addElemOPtions.value = elem.id;
+        addElemOPtions.textContent = elem.name;
+        directions.appendChild(addElemOPtions);
+    })
+}
+
