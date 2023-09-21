@@ -574,7 +574,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 50.5px;
-    
 }
 
 .test_container {
@@ -680,7 +679,7 @@ main {
     line-height: normal;
 }
 
-.btn_test_back:hover{
+.btn_test_back:hover {
     transform: scale(1.05);
 }
 
@@ -701,5 +700,129 @@ main {
 }
 
 .btn_test_next:hover {
+    transform: scale(1.05);
+}
+
+/* -----------------------------------RESULT-PAGE------------------------------- */
+
+.result_content{
+    height: 130vh;
+}
+
+.result_container {
+    width: 632px;
+    height: 621px;
+    margin: auto;
+    border-radius: 24px;
+    background: #fff;
+
+    /* тень */
+    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result_container h1 {
+    margin-top: 40px;
+
+    color: #ff7f01;
+    text-align: center;
+    font-family: Unbounded;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 139%; /* 54.21px */
+}
+
+.result_count span:nth-child(1) {
+    color: #2b2b2b;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139%; /* 34.75px */
+}
+
+.result_count span:nth-child(2) {
+    color: #ff7f01;
+    text-align: center;
+    font-family: Unbounded;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 139%; /* 48.65px */
+}
+
+.result_count span:nth-child(3) {
+    color: #2b2b2b;
+    font-family: Unbounded;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139%;
+}
+
+.result_container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.result_container span:nth-child(4) {
+    width: 411px;
+
+    color: #2b2b2b;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139%; /* 27.8px */
+}
+
+.result_container p {
+    margin-top: 30px;
+
+    color: #2b2b2b;
+    text-align: center;
+    font-family: Unbounded;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139%; /* 27.8px */
+}
+
+.result_container h2 {
+    margin-top: 8px;
+
+    color: #ff7f01;
+    text-align: right;
+    font-family: Unbounded;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 139%; /* 36.14px */
+}
+
+.result_container button {
+    margin-top: 30px;
+    padding: 17px 102px;
+    border-radius: 32px;
+    background: #ff7f01;
+    border: none;
+    transition: transform 0.5s ease;
+
+    color: #fff;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.result_container button:hover{
     transform: scale(1.05);
 }
