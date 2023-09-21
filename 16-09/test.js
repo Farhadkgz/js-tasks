@@ -20,27 +20,69 @@ function renderData(data) {
     let options = "";
 
     data.options.forEach((element, index) => {
-        options += `<label><input type="checkbox" name="option${index}">${element.option}</label><br>`;
+        options += `<label><input type="checkbox" value="${element.option_id}" name="option${index}">${element.option}</label><br>`;
     });
 
     document.querySelector("#answers").innerHTML = options;
 
-    const array = [];
+    const result = {
+        answers: [],
+        question_id: data.question_id
+    };
 
     document.querySelectorAll('[type="checkbox"]').forEach((el) => {
         el.addEventListener("change", () => {
-            const labelText = el.parentElement.textContent.trim();
+            const optionId = el.value;
 
             if (el.checked) {
-                array.push(labelText);
+                result.answers.push(Number(optionId));
             } else {
-                const index = array.indexOf(labelText);
+                const index = result.answers.indexOf(Number(optionId));
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    result.answers.splice(index, 1);
                 }
             }
 
-            console.log(array);
+            
+            sendAnswerData(result);
         });
     });
 }
+
+
+function sendAnswerData(data) {
+   
+    const apiUrl = "http://51.250.97.89:8008/api/v1/exam/question/answer";
+
+    
+    const requestOptions = {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data), 
+    };
+
+    
+    fetch(apiUrl, requestOptions)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Ошибка сети");
+            }
+            return response.json();
+        })
+        .then((responseData) => {
+            console.log("Данные успешно отправлены:", responseData);
+        })
+        .catch((error) => {
+            console.error("Ошибка при отправке данных:", error);
+        });
+
+
+}
+
+const nextButton = document.querySelector("#nextButton");
+nextButton.addEventListener("click", () => {
+    
+    sendAnswerData(result);
+});
