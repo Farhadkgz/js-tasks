@@ -1,5 +1,6 @@
 const forms = document.querySelector('#form-reg');
 
+const base_url = 'http://51.250.97.89:8008';
 
 getApi();
 
@@ -14,10 +15,10 @@ forms.addEventListener('submit', (event) => {
 async function sendingData(){
     const formData = new FormData(forms);
     const data = Object.fromEntries(formData.entries());
-    data.date_of_birth = '09.09.2023';
+    data.date_of_birth = dateConvert(data.date_of_birth);
     const requestBody = JSON.stringify(data);
 
-    const url = 'http://51.250.97.89:8008/api/v1/student/append';
+    const url = base_url + '/api/v1/student/append';
 
     const options = {
         method: 'POST',
@@ -27,11 +28,12 @@ async function sendingData(){
         body:requestBody
     }
 
-    const response = await fetch(url, options)
-    console.log(response);
-
-    if(response.ok){
-        window.location.href = 'start.html';
+    const response = await fetch(url, options);
+    if (response.ok){
+        const data = await response.json();
+        localStorage.setItem('student_exam_id', data.student_exam_id);
+        window.location.href = "start.html";
+        
     }
 }
 
@@ -74,5 +76,19 @@ function renderGetApi(data){
         addElemOPtions.textContent = elem.name;
         directions.appendChild(addElemOPtions);
     })
+}
+
+function dateConvert(dateStrings) {
+    if (dateStrings) {
+        const date = new Date(dateStrings);
+        
+        let getYear = date.toLocaleString('default', {year: 'numeric'});
+        let getMonth = date.toLocaleString('default', {month: '2-digit'});
+        let getDay = date.toLocaleString('default', {day: '2-digit'});
+
+        return getDay + '.' + getMonth + '.' + getYear;
+    } else {
+        return null;
+    }
 }
 
